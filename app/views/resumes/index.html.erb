@@ -1,4 +1,40 @@
 
 <div ng-app="app">
-  {{ 1 + 1 }}
+<div ng-controller="resumeCtrl">
+<div ng-init="setup">
+<input ng-model="nameFilter">
+<div ng-repeat="resume in resumes |filter: {firstName: nameFilter}">
+  <p>First name: {{resume.firstName}}</p>
+  <p>Last name: {{resume.lastName}}</p>
+  <p>email: {{resume.email}}</p>
+  <p>phone number: {{resume.phoneNumber}}</p>
+  <p>Bio: {{resume.bio}}</p>
+  <p>LinkedIn URL: {{resume.linkedInUrl}}</p>
+  <p>Twitter Handle: {{resume.twitterHandle}}</p>
+  <p>Resume Url: {{}}</p>
+  <p>Github Url: {{resume.githubUrl}}</p>
+  <p>Photo: {{resume.photo}}</p>
+
+  <h2>Education: </h2>
+  <p>{{resume.educations.startDate}}</p>
+  <p>{{resume.educations.endDate}}</p>
+  <p>{{resume.educations.degree}}</p>
+  <p>{{resume.educations.universityName}}</p>
+  <p>{{resume.educations.details}}</p>
+  <p>{{resume.educations.studentId}}</p>
+
+  <h2>Experiences</h2>
+   <p>{{resume.experiences.startDate}}</p>
+  <p>{{resume.experiences.endDate}}</p>
+  <p>{{resume.experiences.jobTitle}}</p>
+  <p>{{resume.experiences.companyName}}</p>
+  <p>{{resume.experiences.details}}</p>
+  <p>{{resume.experiences.studentId}}</p>
+
+  <h2>Skills: </h2>
+   <p>{{resume.skills.name}}</p>
+  <p>{{resume.skills.studentId}}</p>
+  </div>
+</div>
+</div>
 </div>
