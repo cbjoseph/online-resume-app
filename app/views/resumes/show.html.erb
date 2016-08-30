@@ -1,0 +1,36 @@
+<div ng-app="app">
+<div ng-controller="resumeCtrl">
+<div ng-init="setup">
+<p>First name: {{individualResume.firstName}}</p>
+  <p>Last name: {{individualResume.lastName}}</p>
+  <p>email: {{individualResume.email}}</p>
+  <p>phone number: {{individualResume.phoneNumber}}</p>
+  <p>Bio: {{individualResume.bio}}</p>
+  <p>LinkedIn URL: {{individualResume.linkedInUrl}}</p>
+  <p>Twitter Handle: {{individualResume.twitterHandle}}</p>
+  <p>individualResume Url: {{}}</p>
+  <p>Github Url: {{individualResume.githubUrl}}</p>
+  <p>Photo: {{individualResume.photo}}</p>
+
+  <h2>Education: </h2>
+  <p>{{individualResume.educations.startDate}}</p>
+  <p>{{individualResume.educations.endDate}}</p>
+  <p>{{individualResume.educations.degree}}</p>
+  <p>{{individualResume.educations.universityName}}</p>
+  <p>{{individualResume.educations.details}}</p>
+  <p>{{individualResume.educations.studentId}}</p>
+
+  <h2>Experiences</h2>
+   <p>{{individualResume.experiences.startDate}}</p>
+  <p>{{individualResume.experiences.endDate}}</p>
+  <p>{{individualResume.experiences.jobTitle}}</p>
+  <p>{{individualResume.experiences.companyName}}</p>
+  <p>{{individualResume.experiences.details}}</p>
+  <p>{{individualResume.experiences.studentId}}</p>
+
+  <h2>Skills: </h2>
+   <p>{{individualResume.skills.name}}</p>
+  <p>{{individualResume.skills.studentId}}</p>
+</div>
+</div>
+</div>
