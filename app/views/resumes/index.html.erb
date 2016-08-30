@@ -14,25 +14,29 @@
         <p>Github Url: {{resume.githubUrl}}</p>
         <p>Photo: {{resume.photo}}</p>
 
-        <h2>Education: </h2>
-        <p>{{resume.educations.startDate}}</p>
-        <p>{{resume.educations.endDate}}</p>
-        <p>{{resume.educations.degree}}</p>
-        <p>{{resume.educations.universityName}}</p>
-        <p>{{resume.educations.details}}</p>
-        <p>{{resume.educations.studentId}}</p>
-
-        <h2>Experiences</h2>
-         <p>{{resume.experiences.startDate}}</p>
-        <p>{{resume.experiences.endDate}}</p>
-        <p>{{resume.experiences.jobTitle}}</p>
-        <p>{{resume.experiences.companyName}}</p>
-        <p>{{resume.experiences.details}}</p>
-        <p>{{resume.experiences.studentId}}</p>
-
-        <h2>Skills: </h2>
-         <p>{{resume.skills.name}}</p>
-        <p>{{resume.skills.studentId}}</p>
+        <h4>Education: </h4>
+        <div ng-repeat="education in resume.educations">
+        <p>{{education.startDate}}</p>
+        <p>{{education.endDate}}</p>
+        <p>{{education.degree}}</p>
+        <p>{{education.universityName}}</p>
+        <p>{{education.details}}</p>
+        <p>{{education.studentId}}</p>
+        </div>
+        <h4>Experiences</h4>
+        <div ng-repeat="experience in resume.experiences">
+         <p>{{experience.startDate}}</p>
+        <p>{{experience.endDate}}</p>
+        <p>{{experience.jobTitle}}</p>
+        <p>{{experience.companyName}}</p>
+        <p>{{experience.details}}</p>
+        <p>{{experience.studentId}}</p>
+        </div>
+        <h4>Skills: </h4>
+        <div ng-repeat="skill in resume.skills">
+         <p>{{skill.name}}</p>
+        <p>{{skill.studentId}}</p>
+        </div>
     </div>
   </div>
 </div>
