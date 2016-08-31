@@ -1,6 +1,6 @@
 /* global angular */
 (function() {
-  angular.module("app").controller("resumeCtrl", function($scope, $http) {
+  angular.module("app").controller("resumeCtrl", ['$scope', '$http', function($scope, $http) {
     $scope.setup = function() {
 
       $http.get("https://pacific-plateau-17386.herokuapp.com/api/v1/students").then(function(response) {
@@ -13,6 +13,6 @@
       // });
       });
     };
-  window.scope = $scope;
-  });
+    window.scope = $scope;
+  }]);
 })();
