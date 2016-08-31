@@ -1,7 +1,7 @@
 
 <div ng-app="app">
   <div ng-controller="resumeCtrl" ng-init="setup()">
-      <input ng-model="nameFilter">
+      <input ng-model="nameFilter" placeholder="Search">
       <div ng-repeat="resume in resumes |filter: {firstName: nameFilter}">
         <img src={{resume.photo}}>
         <h3>Name: {{resume.firstName}} {{resume.lastName}}</h3>
