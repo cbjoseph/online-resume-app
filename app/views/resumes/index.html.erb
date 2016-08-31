@@ -3,16 +3,18 @@
   <div ng-controller="resumeCtrl" ng-init="setup()">
       <input ng-model="nameFilter">
       <div ng-repeat="resume in resumes |filter: {firstName: nameFilter}">
-        <p>First name: {{resume.firstName}}</p>
-        <p>Last name: {{resume.lastName}}</p>
-        <p>email: {{resume.email}}</p>
+        <img src={{resume.photo}}>
+        <h3>Name: {{resume.firstName}} {{resume.lastName}}</h3>
+        <h4>Personal Info:</h4>
+        <a href={{resume.email}}></a>
         <p>phone number: {{resume.phoneNumber}}</p>
         <p>Bio: {{resume.bio}}</p>
-        <p>LinkedIn URL: {{resume.linkedInUrl}}</p>
-        <p>Twitter Handle: {{resume.twitterHandle}}</p>
-        <p>Resume Url: {{}}</p>
-        <p>Github Url: {{resume.githubUrl}}</p>
-        <p>Photo: {{resume.photo}}</p>
+        <a href={{resume.linkedInUrl}}>LinkedIn</a>
+        <p>Twitter Handle: @{{resume.twitterHandle}}</p>
+        <a href={{}}>Resume</a>
+        <br>
+        <a href={{resume.githubUrl}}>Github</a>
+
 
         <h4>Education: </h4>
         <div ng-repeat="education in resume.educations">
@@ -37,6 +39,7 @@
          <p>{{skill.name}}</p>
         <p>{{skill.studentId}}</p>
         </div>
+        <hr>
     </div>
   </div>
 </div>
