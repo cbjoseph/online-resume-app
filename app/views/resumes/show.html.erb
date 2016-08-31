@@ -1,16 +1,17 @@
 <div ng-app="app">
 <div ng-controller="showCtrl">
 <div ng-init="setup(<%= @id %>)">
-<p>First name: {{resume.firstName}}</p>
-  <p>Last name: {{resume.lastName}}</p>
-  <p>email: {{resume.email}}</p>
-  <p>phone number: {{resume.phoneNumber}}</p>
-  <p>Bio: {{resume.bio}}</p>
-  <p>LinkedIn URL: {{resume.linkedInUrl}}</p>
-  <p>Twitter Handle: {{resume.twitterHandle}}</p>
-  <p>resume Url: {{}}</p>
-  <p>Github Url: {{resume.githubUrl}}</p>
-  <p>Photo: {{resume.photo}}</p>
+    <img src={{resume.photo}}>
+    <h3>Name: {{resume.firstName}} {{resume.lastName}}</h3>
+    <h4>Personal Info:</h4>
+    <p>phone number: {{resume.phoneNumber}}</p>
+    <p>Bio: {{resume.bio}}</p>
+    <a href={{resume.linkedInUrl}}>LinkedIn</a>
+    <p>Twitter Handle: @{{resume.twitterHandle}}</p>
+    <a href={{}}>Resume</a>
+    <a href={{resume.email}}>Email</a>
+    <br>
+    <a href={{resume.githubUrl}}>Github</a>
 
   <h4>Education: </h4>
     <div ng-repeat="education in resume.educations">
