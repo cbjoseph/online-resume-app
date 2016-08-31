@@ -1,36 +1,40 @@
 <div ng-app="app">
-<div ng-controller="resumeCtrl">
-<div ng-init="setup">
-<p>First name: {{individualResume.firstName}}</p>
-  <p>Last name: {{individualResume.lastName}}</p>
-  <p>email: {{individualResume.email}}</p>
-  <p>phone number: {{individualResume.phoneNumber}}</p>
-  <p>Bio: {{individualResume.bio}}</p>
-  <p>LinkedIn URL: {{individualResume.linkedInUrl}}</p>
-  <p>Twitter Handle: {{individualResume.twitterHandle}}</p>
-  <p>individualResume Url: {{}}</p>
-  <p>Github Url: {{individualResume.githubUrl}}</p>
-  <p>Photo: {{individualResume.photo}}</p>
+<div ng-controller="showCtrl">
+<div ng-init="setup(<%= @id %>)">
+<p>First name: {{resume.firstName}}</p>
+  <p>Last name: {{resume.lastName}}</p>
+  <p>email: {{resume.email}}</p>
+  <p>phone number: {{resume.phoneNumber}}</p>
+  <p>Bio: {{resume.bio}}</p>
+  <p>LinkedIn URL: {{resume.linkedInUrl}}</p>
+  <p>Twitter Handle: {{resume.twitterHandle}}</p>
+  <p>resume Url: {{}}</p>
+  <p>Github Url: {{resume.githubUrl}}</p>
+  <p>Photo: {{resume.photo}}</p>
 
-  <h2>Education: </h2>
-  <p>{{individualResume.educations.startDate}}</p>
-  <p>{{individualResume.educations.endDate}}</p>
-  <p>{{individualResume.educations.degree}}</p>
-  <p>{{individualResume.educations.universityName}}</p>
-  <p>{{individualResume.educations.details}}</p>
-  <p>{{individualResume.educations.studentId}}</p>
-
-  <h2>Experiences</h2>
-   <p>{{individualResume.experiences.startDate}}</p>
-  <p>{{individualResume.experiences.endDate}}</p>
-  <p>{{individualResume.experiences.jobTitle}}</p>
-  <p>{{individualResume.experiences.companyName}}</p>
-  <p>{{individualResume.experiences.details}}</p>
-  <p>{{individualResume.experiences.studentId}}</p>
-
-  <h2>Skills: </h2>
-   <p>{{individualResume.skills.name}}</p>
-  <p>{{individualResume.skills.studentId}}</p>
+  <h4>Education: </h4>
+    <div ng-repeat="education in resume.educations">
+      <p>{{education.startDate}}</p>
+      <p>{{education.endDate}}</p>
+      <p>{{education.degree}}</p>
+      <p>{{education.universityName}}</p>
+      <p>{{education.details}}</p>
+      <p>{{education.studentId}}</p>
+    </div>
+    <h4>Experiences</h4>
+    <div ng-repeat="experience in resume.experiences">
+      <p>{{experience.startDate}}</p>
+      <p>{{experience.endDate}}</p>
+      <p>{{experience.jobTitle}}</p>
+      <p>{{experience.companyName}}</p>
+      <p>{{experience.details}}</p>
+      <p>{{experience.studentId}}</p>
+    </div>
+    <h4>Skills: </h4>
+    <div ng-repeat="skill in resume.skills">
+      <p>{{skill.name}}</p>
+      <p>{{skill.studentId}}</p>
+    </div>
 </div>
 </div>
 </div>
